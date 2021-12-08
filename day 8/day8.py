@@ -88,10 +88,20 @@ def getPoss(data, code):
     poss = []
     for a in data['a']:
         for b in data['b']:
+            if a == b:
+                continue
             for c in data['c']:
+                if len(set([a,b,c])) != 3:
+                    continue
                 for d in data['d']:
+                    if len(set([a,b,c,d])) != 4:
+                        continue
                     for e in data['e']:
+                        if len(set([a,b,c,d,e])) != 5:
+                            continue
                         for f in data['f']:
+                            if len(set([a,b,c,d,e,f])) != 6:
+                                continue
                             for g in data['g']:
                                 if len(set([a,b,c,d,e,f,g])) == 7:
                                     attempt = [0] * 7 #0000000
