@@ -6,10 +6,12 @@ def loadData():
     f.close()
     return out
 
-data = loadData()
-
 def solve_1():
-    pass
+    data = loadData()
 
 def solve_2():
-    pass
+    data = loadData()
+
+print("Part 1:", solve_1())
+
+print("Part 2:", solve_2())
